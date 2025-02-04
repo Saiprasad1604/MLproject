@@ -2,4 +2,5 @@ pandas
 setuptools
 numpy
 seaborn
+sys
 -e .
