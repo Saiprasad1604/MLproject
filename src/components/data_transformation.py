@@ -54,6 +54,8 @@ class DataTransformation:
                 ]
             )
             
+            
+            
             logging.info("numerical columns sccaling is completed")
             
             logging.info("categorical colums encoding completed")
@@ -64,6 +66,14 @@ class DataTransformation:
                     ("cat_pipeline",cat_pipeline,categorical_columns)
                 ]
             )
+            
+            # preprocessor = ColumnTransformer(
+            #     [
+            #         ("OneHotEncoder", OneHotEncoder(), numerical_columns),
+            #         ("StandardScaler", StandardScaler(), categorical_columns),        
+            #     ]
+            #)
+
             return preprocessor
         except Exception as e:
             raise CustomException(e,sys)
